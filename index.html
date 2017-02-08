@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div ng-app = "MyApp" ng-controller = "MyController">
+ <div class="container">
+	<div  id="smalldiv" class="col-md-8">
+
+<input type = "text" ng-model ="cityName" id="textData" placeholder ="Enter Your City Name">
+<input id = "myBtn" type = "button" class="btn btn-lg btn-primary"  value = "°C" ng-click= "celciusGet()">
+    
+<input type="button" class="btn btn-lg btn-primary" id = "myBtn" value="°F" ng-click="farGet()">
+
+</div>
+
+<div class="col-md-2">
+   
+     </div>
+</div>
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-4" id = "whtrContent">
+<h1 align="center">{{ cityName }}</h1>
+<hr />
+ <p align ="center"> <img src="http://openweathermap.org/img/w/{{ imgCode }}.png" width="250" height="250"> </p>
+<h1 align = "center" class = "cityName"> {{ tmp | number : 1 }} </h1>
+<p align = "center"> <span class = "temp"> Min Temp :  {{minTemp | number : 1 }}</span><span class = "temp"> Max Temp :  {{maxTemp | number : 1 }} </span> </p>
+
+  
+    </div>
+<div id="tablecontainer" class="col-md-2"> 
+    <table class="table table-striped">
+    <tr>
+        <th>Wind</th>
+        <td>{{windspeed}} m/s</td>
+    </tr>
+    <tr>
+        <th>Cloudiness </th>
+       <td> {{cloudiness}}</td>
+    </tr>
+    <tr>
+        <th>Pressure</th>
+       <td>{{pressure | number : 1}} Pa </td>
+    </tr> <tr>
+        <th>Humidity</th>
+       <td>{{humidity}}%</td>
+    </tr> <tr>
+        <th>Sunrise</th>
+       <td>{{sunrise}}</td>
+    </tr> <tr>
+        <th>Sunset</th>
+       <td>{{sunset}}</td>
+    </tr>
+    </table>
+</div>
+</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.1/angular.min.js"></script>
+<script src=  "app.module.js"></script>
+
+
+</body>
+</html>

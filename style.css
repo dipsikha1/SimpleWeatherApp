@@ -1,0 +1,48 @@
+
+body {
+background-image:url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#textData{
+    margin-top: 50px;
+    width: 350px;
+	padding: 20px;
+    margin-left: 20px;
+	}
+#myBtn{
+	
+	margin-left: 20px;
+}
+
+#whtrImg{
+   width: 150px;
+    height: 500px;
+  
+}
+.cityName{
+   font-size: 100px;
+}
+.temp{
+   padding: 15px;
+   background: blue;
+   color: white;
+}
+#tablecontainer {
+    padding: 20px;
+margin-top: 60px;
+    
+}
+.table table-striped{
+    padding: 20px;
+}
+th, td {
+     font-size: 16px;
+}
+/*
+td>nth-child(odd) {
+   color: aliceblue;
+}
+*/
+
